@@ -6,15 +6,34 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 --
 require('lazy').setup({
+  {
+    'folke/snacks.nvim',
+    opts = {
+      animate = { enabled = true },
+      bigfile = { enabled = true },
+      scroll = { enabled = true },
+      lazygit = { enabled = true },
+    },
+    keys = {
+      {
+        '<leader>gg',
+        function()
+          require('snacks').lazygit()
+        end,
+        desc = 'Lazygit',
+      },
+    },
+  },
   { 'NMAC427/guess-indent.nvim', opts = {} },
   {
     'lewis6991/gitsigns.nvim',
-    opts = {},
+    opts = {
+      word_diff = true,
+      current_line_blame = true,
+    },
   },
 
-  -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
-  --
-  -- This is often very useful to both group configuration, as well as handle
+  -- This is of very useful to both group configuration, as well as handle
   -- lazy loading plugins that don't need to be loaded immediately at startup.
   --
   -- For example, in the following configuration, we use:
@@ -74,6 +93,7 @@ require('lazy').setup({
       spec = {
         { '<leader>s', group = '[S]earch' },
         { '<leader>t', group = '[T]oggle' },
+        { '<leader>g', group = '[G]it' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
