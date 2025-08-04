@@ -24,42 +24,42 @@ require('lazy').setup({
       {
         '<leader><space>',
         function()
-          Snacks.picker.smart()
+          require('snacks').picker.smart()
         end,
         desc = 'Smart Find Files',
       },
       {
         '<leader>,',
         function()
-          Snacks.picker.buffers()
+          require('snacks').picker.buffers()
         end,
         desc = 'Buffers',
       },
       {
         '<leader>/',
         function()
-          Snacks.picker.grep()
+          require('snacks').picker.grep()
         end,
         desc = 'Grep',
       },
       {
         '<leader>:',
         function()
-          Snacks.picker.command_history()
+          require('snacks').picker.command_history()
         end,
         desc = 'Command History',
       },
       {
         '<leader>n',
         function()
-          Snacks.picker.notifications()
+          require('snacks').picker.notifications()
         end,
         desc = 'Notification History',
       },
       {
         '<leader>e',
         function()
-          Snacks.explorer()
+          require('snacks').explorer()
         end,
         desc = 'File Explorer',
       },
@@ -67,42 +67,42 @@ require('lazy').setup({
       {
         '<leader>fb',
         function()
-          Snacks.picker.buffers()
+          require('snacks').picker.buffers()
         end,
         desc = 'Buffers',
       },
       {
         '<leader>fc',
         function()
-          Snacks.picker.files { cwd = vim.fn.stdpath 'config' }
+          require('snacks').picker.files { cwd = vim.fn.stdpath 'config' }
         end,
         desc = 'Find Config File',
       },
       {
         '<leader>ff',
         function()
-          Snacks.picker.files()
+          require('snacks').picker.files()
         end,
         desc = 'Find Files',
       },
       {
         '<leader>fg',
         function()
-          Snacks.picker.git_files()
+          require('snacks').picker.git_files()
         end,
         desc = 'Find Git Files',
       },
       {
         '<leader>fp',
         function()
-          Snacks.picker.projects()
+          require('snacks').picker.projects()
         end,
         desc = 'Projects',
       },
       {
         '<leader>fr',
         function()
-          Snacks.picker.recent()
+          require('snacks').picker.recent()
         end,
         desc = 'Recent',
       },
@@ -110,56 +110,56 @@ require('lazy').setup({
       {
         '<leader>gg',
         function()
-          Snacks.lazygit()
+          require('snacks').lazygit()
         end,
         desc = 'Lazygit',
       },
       {
         '<leader>gb',
         function()
-          Snacks.picker.git_branches()
+          require('snacks').picker.git_branches()
         end,
         desc = 'Git Branches',
       },
       {
         '<leader>gl',
         function()
-          Snacks.picker.git_log()
+          require('snacks').picker.git_log()
         end,
         desc = 'Git Log',
       },
       {
         '<leader>gL',
         function()
-          Snacks.picker.git_log_line()
+          require('snacks').picker.git_log_line()
         end,
         desc = 'Git Log Line',
       },
       {
         '<leader>gs',
         function()
-          Snacks.picker.git_status()
+          require('snacks').picker.git_status()
         end,
         desc = 'Git Status',
       },
       {
         '<leader>gS',
         function()
-          Snacks.picker.git_stash()
+          require('snacks').picker.git_stash()
         end,
         desc = 'Git Stash',
       },
       {
         '<leader>gd',
         function()
-          Snacks.picker.git_diff()
+          require('snacks').picker.git_diff()
         end,
         desc = 'Git Diff (Hunks)',
       },
       {
         '<leader>gf',
         function()
-          Snacks.picker.git_log_file()
+          require('snacks').picker.git_log_file()
         end,
         desc = 'Git Log File',
       },
@@ -167,28 +167,28 @@ require('lazy').setup({
       {
         '<leader>sb',
         function()
-          Snacks.picker.lines()
+          require('snacks').picker.lines()
         end,
         desc = 'Buffer Lines',
       },
       {
         '<leader>sB',
         function()
-          Snacks.picker.grep_buffers()
+          require('snacks').picker.grep_buffers()
         end,
         desc = 'Grep Open Buffers',
       },
       {
         '<leader>sg',
         function()
-          Snacks.picker.grep()
+          require('snacks').picker.grep()
         end,
         desc = 'Grep',
       },
       {
         '<leader>sw',
         function()
-          Snacks.picker.grep_word()
+          require('snacks').picker.grep_word()
         end,
         desc = 'Visual selection or word',
         mode = { 'n', 'x' },
@@ -197,147 +197,147 @@ require('lazy').setup({
       {
         '<leader>s"',
         function()
-          Snacks.picker.registers()
+          require('snacks').picker.registers()
         end,
         desc = 'Registers',
       },
       {
         '<leader>s/',
         function()
-          Snacks.picker.search_history()
+          require('snacks').picker.search_history()
         end,
         desc = 'Search History',
       },
       {
         '<leader>sa',
         function()
-          Snacks.picker.autocmds()
+          require('snacks').picker.autocmds()
         end,
         desc = 'Autocmds',
       },
       {
         '<leader>sb',
         function()
-          Snacks.picker.lines()
+          require('snacks').picker.lines()
         end,
         desc = 'Buffer Lines',
       },
       {
         '<leader>sc',
         function()
-          Snacks.picker.command_history()
+          require('snacks').picker.command_history()
         end,
         desc = 'Command History',
       },
       {
         '<leader>sC',
         function()
-          Snacks.picker.commands()
+          require('snacks').picker.commands()
         end,
         desc = 'Commands',
       },
       {
         '<leader>sd',
         function()
-          Snacks.picker.diagnostics()
+          require('snacks').picker.diagnostics()
         end,
         desc = 'Diagnostics',
       },
       {
         '<leader>sD',
         function()
-          Snacks.picker.diagnostics_buffer()
+          require('snacks').picker.diagnostics_buffer()
         end,
         desc = 'Buffer Diagnostics',
       },
       {
         '<leader>sh',
         function()
-          Snacks.picker.help()
+          require('snacks').picker.help()
         end,
         desc = 'Help Pages',
       },
       {
         '<leader>sH',
         function()
-          Snacks.picker.highlights()
+          require('snacks').picker.highlights()
         end,
         desc = 'Highlights',
       },
       {
         '<leader>si',
         function()
-          Snacks.picker.icons()
+          require('snacks').picker.icons()
         end,
         desc = 'Icons',
       },
       {
         '<leader>sj',
         function()
-          Snacks.picker.jumps()
+          require('snacks').picker.jumps()
         end,
         desc = 'Jumps',
       },
       {
         '<leader>sk',
         function()
-          Snacks.picker.keymaps()
+          require('snacks').picker.keymaps()
         end,
         desc = 'Keymaps',
       },
       {
         '<leader>sl',
         function()
-          Snacks.picker.loclist()
+          require('snacks').picker.loclist()
         end,
         desc = 'Location List',
       },
       {
         '<leader>sm',
         function()
-          Snacks.picker.marks()
+          require('snacks').picker.marks()
         end,
         desc = 'Marks',
       },
       {
         '<leader>sM',
         function()
-          Snacks.picker.man()
+          require('snacks').picker.man()
         end,
         desc = 'Man Pages',
       },
       {
         '<leader>sp',
         function()
-          Snacks.picker.lazy()
+          require('snacks').picker.lazy()
         end,
         desc = 'Search for Plugin Spec',
       },
       {
         '<leader>sq',
         function()
-          Snacks.picker.qflist()
+          require('snacks').picker.qflist()
         end,
         desc = 'Quickfix List',
       },
       {
         '<leader>sR',
         function()
-          Snacks.picker.resume()
+          require('snacks').picker.resume()
         end,
         desc = 'Resume',
       },
       {
         '<leader>su',
         function()
-          Snacks.picker.undo()
+          require('snacks').picker.undo()
         end,
         desc = 'Undo History',
       },
       {
         '<leader>uC',
         function()
-          Snacks.picker.colorschemes()
+          require('snacks').picker.colorschemes()
         end,
         desc = 'Colorschemes',
       },
@@ -345,21 +345,21 @@ require('lazy').setup({
       {
         'gd',
         function()
-          Snacks.picker.lsp_definitions()
+          require('snacks').picker.lsp_definitions()
         end,
         desc = 'Goto Definition',
       },
       {
         'gD',
         function()
-          Snacks.picker.lsp_declarations()
+          require('snacks').picker.lsp_declarations()
         end,
         desc = 'Goto Declaration',
       },
       {
         'gr',
         function()
-          Snacks.picker.lsp_references()
+          require('snacks').picker.lsp_references()
         end,
         nowait = true,
         desc = 'References',
@@ -367,28 +367,28 @@ require('lazy').setup({
       {
         'gI',
         function()
-          Snacks.picker.lsp_implementations()
+          require('snacks').picker.lsp_implementations()
         end,
         desc = 'Goto Implementation',
       },
       {
         'gy',
         function()
-          Snacks.picker.lsp_type_definitions()
+          require('snacks').picker.lsp_type_definitions()
         end,
         desc = 'Goto T[y]pe Definition',
       },
       {
         '<leader>ss',
         function()
-          Snacks.picker.lsp_symbols()
+          require('snacks').picker.lsp_symbols()
         end,
         desc = 'LSP Symbols',
       },
       {
         '<leader>sS',
         function()
-          Snacks.picker.lsp_workspace_symbols()
+          require('snacks').picker.lsp_workspace_symbols()
         end,
         desc = 'LSP Workspace Symbols',
       },
@@ -406,11 +406,11 @@ require('lazy').setup({
     event = 'VeryLazy',
     opts = {
       preset = 'helix',
-      -- spec = {
-      --   { '<leader>s', group = '[S]earch' },
-      --   { '<leader>t', group = '[T]oggle' },
-      --   { '<leader>g', group = '[G]it' },
-      -- },
+      spec = {
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>g', group = '[G]it' },
+      },
     },
   },
   -- LSP Plugins
