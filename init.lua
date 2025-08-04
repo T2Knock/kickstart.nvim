@@ -8,11 +8,14 @@ require 'lazy-bootstrap'
 require('lazy').setup({
   {
     'folke/snacks.nvim',
+    priority = 1000,
+    lazy = false,
     opts = {
       animate = { enabled = true },
       bigfile = { enabled = true },
       scroll = { enabled = true },
       lazygit = { enabled = true },
+      statuscolumn = { enabled = true },
     },
     keys = {
       {
@@ -28,24 +31,10 @@ require('lazy').setup({
   {
     'lewis6991/gitsigns.nvim',
     opts = {
-      word_diff = true,
       current_line_blame = true,
     },
   },
-
-  -- This is of very useful to both group configuration, as well as handle
-  -- lazy loading plugins that don't need to be loaded immediately at startup.
-  --
-  -- For example, in the following configuration, we use:
-  --  event = 'VimEnter'
-  --
-  -- which loads which-key before all the UI elements are loaded. Events can be
-  -- normal autocommands events (`:help autocmd-events`).
-  --
-  -- Then, because we use the `opts` key (recommended), the configuration runs
-  -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
-
-  { -- Useful plugin to show you pending keybinds.
+  {
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {

@@ -38,3 +38,6 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 
 vim.o.confirm = true
+
+vim.o.foldlevel = 99
+vim.o.conceallevel = 2
