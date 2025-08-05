@@ -20,12 +20,6 @@ require('lazy').setup {
     { import = 'plugins' },
     { 'NMAC427/guess-indent.nvim', opts = {} },
     {
-      'lewis6991/gitsigns.nvim',
-      opts = {
-        current_line_blame = true,
-      },
-    },
-    {
       'folke/which-key.nvim',
       event = 'VeryLazy',
       opts = {
