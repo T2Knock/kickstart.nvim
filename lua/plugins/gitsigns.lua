@@ -1,23 +1,3 @@
-local function git_blame_toggle(opts)
-  return require('snacks.toggle').new({
-    id = 'gitsigns_blame',
-    name = 'Gitsigns Blame',
-    icon = '',
-    get = function()
-      local gs_config = require('gitsigns.config').config
-      local blame_active = gs_config.current_line_blame
-      return blame_active
-    end,
-    set = function(state)
-      if state then
-        require('gitsigns').toggle_current_line_blame(true)
-      else
-        require('gitsigns').toggle_current_line_blame(false)
-      end
-    end,
-  }, opts)
-end
-
 return {
   'lewis6991/gitsigns.nvim',
   dependencies = {
@@ -92,14 +72,6 @@ return {
       '<leader>hR',
       '<cmd>Gitsigns reset_buffer<cr>',
       desc = 'Reset Buffer',
-    },
-    -- Toggle blame information for the current line.
-    {
-      '<leader>hb',
-      function()
-        git_blame_toggle()
-      end,
-      desc = 'Toggle Blame',
     },
   },
 }
