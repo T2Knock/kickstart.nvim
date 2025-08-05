@@ -10,6 +10,7 @@ return {
     statuscolumn = { enabled = true },
     picker = { enabled = true },
     explorer = { enabled = true },
+    toggle = { enabled = true },
   },
   keys = {
     -- Top Pickers & Explorer
