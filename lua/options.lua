@@ -41,3 +41,7 @@ vim.o.confirm = true
 
 vim.o.foldlevel = 99
 vim.o.conceallevel = 2
+
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
