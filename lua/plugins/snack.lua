@@ -370,7 +370,7 @@ local keymaps = {
     desc = 'Goto Declaration',
   },
   {
-    'gr',
+    'grr',
     function()
       require('snacks').picker.lsp_references()
     end,
@@ -378,14 +378,14 @@ local keymaps = {
     desc = 'References',
   },
   {
-    'gI',
+    'gri',
     function()
       require('snacks').picker.lsp_implementations()
     end,
     desc = 'Goto Implementation',
   },
   {
-    'gy',
+    'grt',
     function()
       require('snacks').picker.lsp_type_definitions()
     end,

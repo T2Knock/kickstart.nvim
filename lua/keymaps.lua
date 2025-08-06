@@ -5,7 +5,6 @@
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>k', 'i<CR><Esc>', { desc = 'Down a line' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<leader>w', '<cmd>w<CR>', { desc = 'Save the file' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
