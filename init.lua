@@ -1,7 +1,7 @@
-require 'options'
+require 'config.options'
 require 'config.lazy'
-require 'keymaps'
-require 'autocommands'
+require 'config.keymaps'
+require 'config.autocommands'
 
 -- Setting colorschemes
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight]]
