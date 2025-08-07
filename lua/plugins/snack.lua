@@ -381,6 +381,7 @@ return {
     words = { enabled = true },
     quickfile = { enabled = true },
     rename = { enabled = true },
+    health = { enabled = true },
   },
 
   keys = keymaps,
