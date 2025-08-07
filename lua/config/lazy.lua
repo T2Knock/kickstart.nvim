@@ -14,27 +14,6 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   spec = {
     { import = 'plugins' },
-    { 'NMAC427/guess-indent.nvim', opts = {} },
-    {
-      'folke/which-key.nvim',
-      event = 'VeryLazy',
-      opts = {
-        preset = 'helix',
-        spec = {
-          { '<leader>s', group = '[S]earch', icon = '󱙓' },
-          { '<leader>t', group = '[T]oggle', icon = '' },
-          { '<leader>f', group = '[F]ind', icon = '󰈞' },
-          { '<leader>g', group = '[G]it', icon = '' },
-          { '<leader>h', group = '[H]unk', icon = '' },
-        },
-      },
-    },
-
-    -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-    --
-    --  Here are some example plugins that I've included in the Kickstart repository.
-    --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-    --
     -- require 'kickstart.plugins.debug',
     -- require 'kickstart.plugins.indent_line',
     -- require 'kickstart.plugins.lint',

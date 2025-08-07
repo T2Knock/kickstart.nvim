@@ -26,11 +26,13 @@ return {
 
             -- linter
             'shellcheck',
-            'gofumpt',
-            'goimports',
+            'eslint',
+            'golangci-lint',
 
             -- formatter
             'prettierd',
+            'gofumpt',
+            'goimports',
           },
         },
       },
