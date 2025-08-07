@@ -13,6 +13,13 @@ return {
       },
       sections = {
         lualine_z = { 'lsp_status' },
+        lualine_c = {
+          {
+            'filename',
+            file_status = true,
+            path = 3,
+          },
+        },
       },
     }
   end,
