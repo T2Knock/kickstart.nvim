@@ -30,34 +30,6 @@ local keymaps = {
     desc = 'Smart Find Files',
   },
   {
-    '<leader>,',
-    function()
-      require('snacks').picker.buffers()
-    end,
-    desc = 'Buffers',
-  },
-  {
-    '<leader>/',
-    function()
-      require('snacks').picker.grep()
-    end,
-    desc = 'Grep',
-  },
-  {
-    '<leader>:',
-    function()
-      require('snacks').picker.command_history()
-    end,
-    desc = 'Command History',
-  },
-  {
-    '<leader>n',
-    function()
-      require('snacks').picker.notifications()
-    end,
-    desc = 'Notification History',
-  },
-  {
     '<leader>e',
     function()
       require('snacks').explorer()
@@ -79,6 +51,13 @@ local keymaps = {
       require('snacks').picker.files { cwd = vim.fn.stdpath 'config' }
     end,
     desc = 'Find Config File',
+  },
+  {
+    '<leader>fC',
+    function()
+      require('snacks').picker.colorschemes()
+    end,
+    desc = 'Colorschemes',
   },
   {
     '<leader>ff',
@@ -345,15 +324,6 @@ local keymaps = {
     mode = { 'n', 'x' },
   },
 
-  -- UI operations
-  {
-    '<leader>uC',
-    function()
-      require('snacks').picker.colorschemes()
-    end,
-    desc = 'Colorschemes',
-  },
-
   -- LSP operations
   {
     'gd',
@@ -407,6 +377,10 @@ return {
     picker = { enabled = true },
     explorer = { enabled = true },
     toggle = { enabled = true },
+    input = { enabled = true },
+    words = { enabled = true },
+    quickfile = { enabled = true },
+    rename = { enabled = true },
   },
 
   keys = keymaps,

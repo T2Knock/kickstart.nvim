@@ -12,6 +12,7 @@ return {
         { '<leader>f', group = '[F]ind', icon = '󰈞' },
         { '<leader>g', group = '[G]it', icon = '' },
         { '<leader>h', group = '[H]unk', icon = '' },
+        { '<leader>c', group = '[C]ode', icon = '' },
       },
     },
   },
