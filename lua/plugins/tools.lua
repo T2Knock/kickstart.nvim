@@ -28,6 +28,9 @@ return {
             'shellcheck',
             'gofumpt',
             'goimports',
+
+            -- formatter
+            'prettierd',
           },
         },
       },

@@ -27,3 +27,4 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.winborder = 'rounded'
 vim.o.clipboard = 'unnamedplus'
+vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
