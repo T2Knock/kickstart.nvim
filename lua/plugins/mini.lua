@@ -16,6 +16,7 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+      require('mini.icons').setup()
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = true }
