@@ -13,7 +13,7 @@ return {
       vue = { 'eslint' },
 
       python = { 'ruff' },
-      go = { 'golangci-lint' },
+      go = { 'golangcilint' },
 
       sh = { 'shellcheck' },
       bash = { 'shellcheck' },
