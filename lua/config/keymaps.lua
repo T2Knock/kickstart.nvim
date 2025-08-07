@@ -1,30 +1,26 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
-
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
+-- Clear search highlights
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<leader>k', 'i<CR><Esc>', { desc = 'Down a line' })
+
+-- Insert blank line below current line
+vim.keymap.set('n', '<leader>k', 'o<Esc>', { desc = 'Insert line below' })
+
+-- Buffer navigation
+vim.keymap.set('n', 'H', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', 'L', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- Window navigation
+-- See `:help wincmd` for all window commands
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Focus left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Focus right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Focus lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Focus upper window' })
 
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
--- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
--- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
--- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
--- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
--- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+-- Window movement
+vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move window left' })
+vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window right' })
+vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window down' })
+vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window up' })
