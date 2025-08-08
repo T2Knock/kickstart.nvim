@@ -2,7 +2,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Insert blank line below current line
-vim.keymap.set('n', '<leader>k', 'o<Esc>', { desc = 'Insert line below' })
+vim.keymap.set('n', '<leader>k', 'i<CR><Esc>', { desc = 'Insert line below' })
 
 -- Buffer navigation
 vim.keymap.set('n', 'H', '<cmd>bprevious<CR>', { desc = 'Previous buffer' })
