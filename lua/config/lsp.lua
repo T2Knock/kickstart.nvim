@@ -56,3 +56,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+-- Override default LSP config
+vim.lsp.config('bashls', {
+  filetypes = { 'sh', 'bash', 'zsh' },
+})
+
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      completion = {
+        callSnippet = 'Replace',
+      },
+      diagnostics = {
+        disable = { 'missing-fields' },
+      },
+    },
+  },
+})
