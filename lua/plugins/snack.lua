@@ -30,21 +30,13 @@ local keymaps = {
     desc = 'Smart Find Files',
   },
   {
-    '<leader>e',
+    '<leader>,',
     function()
-      require('snacks').explorer()
-    end,
-    desc = 'File Explorer',
-  },
-
-  -- File operations (f prefix)
-  {
-    '<leader>fb',
-    function()
-      require('snacks').picker.buffers()
+      require('snacks').picker.buffers { focus = 'list' }
     end,
     desc = 'Buffers',
   },
+  -- File operations (f prefix)
   {
     '<leader>fc',
     function()
@@ -374,7 +366,6 @@ return {
     scroll = { enabled = true },
     lazygit = { enabled = true },
     statuscolumn = { enabled = true },
-    picker = { enabled = true },
     explorer = { enabled = true },
     toggle = { enabled = true },
     input = { enabled = true },
@@ -382,6 +373,7 @@ return {
     quickfile = { enabled = true },
     rename = { enabled = true },
     health = { enabled = true },
+    picker = {},
   },
 
   keys = keymaps,
