@@ -24,3 +24,15 @@ vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move window left' })
 vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window right' })
 vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window down' })
 vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window up' })
+
+-- Quickfix navigation
+vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>', { desc = 'Quickfix: next item' })
+vim.keymap.set('n', '<M-k>', '<cmd>cprevious<CR>', { desc = 'Quickfix: previous item' })
+
+-- Location list navigation
+vim.keymap.set('n', '<M-n>', '<cmd>lnext<CR>', { desc = 'Location list: next item' })
+vim.keymap.set('n', '<M-p>', '<cmd>lprevious<CR>', { desc = 'Location list: previous item' })
+
+-- Jump to first/last quickfix item
+vim.keymap.set('n', '<M-h>', '<cmd>cfirst<CR>', { desc = 'Quickfix: first item' })
+vim.keymap.set('n', '<M-l>', '<cmd>clast<CR>', { desc = 'Quickfix: last item' })
