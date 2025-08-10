@@ -36,8 +36,12 @@ return {
         theme = custom_tokyonight,
       },
       sections = {
+        lualine_b = {
+          'branch',
+        },
         lualine_c = {
-          'buffers',
+          'diff',
+          'diagnostics',
         },
         lualine_x = { 'lsp_status', formatter, linter_progress },
       },
@@ -52,6 +56,7 @@ return {
             paddding = 3,
           },
         },
+        lualine_z = { 'tabs' },
       },
     }
   end,
