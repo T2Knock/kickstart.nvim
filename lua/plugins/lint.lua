@@ -17,7 +17,6 @@ return {
 
       sh = { 'shellcheck' },
       bash = { 'shellcheck' },
-      zsh = { 'shellcheck' },
     }
 
     -- Create autocommand for linting
