@@ -13,6 +13,7 @@ return {
         { '<leader>g', group = '[G]it', icon = '' },
         { '<leader>h', group = '[H]unk', icon = '' },
         { '<leader>c', group = '[C]ode', icon = '' },
+        { '<leader>n', group = '[N]otes', icon = '' },
       },
     },
   },

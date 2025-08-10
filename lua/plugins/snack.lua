@@ -373,6 +373,7 @@ return {
     quickfile = { enabled = true },
     rename = { enabled = true },
     health = { enabled = true },
+    image = { enabled = true },
     picker = {},
   },
 
