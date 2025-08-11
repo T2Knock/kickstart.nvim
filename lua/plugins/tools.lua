@@ -28,6 +28,7 @@ return {
             'shellcheck',
             'eslint',
             'golangci-lint',
+            'markdownlint-cli2',
 
             -- formatter
             'prettierd',

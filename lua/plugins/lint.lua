@@ -17,6 +17,8 @@ return {
 
       sh = { 'shellcheck' },
       bash = { 'shellcheck' },
+
+      markdown = { 'markdownlint-cli2' },
     }
 
     -- Create autocommand for linting
