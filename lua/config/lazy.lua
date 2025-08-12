@@ -14,8 +14,6 @@ rtp:prepend(lazypath)
 require('lazy').setup {
   spec = {
     { import = 'plugins' },
-    -- require 'kickstart.plugins.debug',
-    -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   },
   performance = {
     rtp = {
