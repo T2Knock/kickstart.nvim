@@ -68,9 +68,9 @@ local keymaps = {
   {
     '<leader>fp',
     function()
-      require('snacks').picker.projects()
+      require('snacks').picker.files { cwd = vim.fs.joinpath(vim.fn.stdpath 'data', 'lazy') }
     end,
-    desc = 'Projects',
+    desc = 'Search for packages',
   },
   {
     '<leader>fr',
@@ -264,13 +264,6 @@ local keymaps = {
       require('snacks').picker.man()
     end,
     desc = 'Man Pages',
-  },
-  {
-    '<leader>sp',
-    function()
-      require('snacks').picker.lazy()
-    end,
-    desc = 'Search for Plugin Spec',
   },
   {
     '<leader>sq',

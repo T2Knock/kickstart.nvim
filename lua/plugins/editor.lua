@@ -1,5 +1,27 @@
 return {
-  { 'folke/todo-comments.nvim', event = 'BufEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = {} },
+  { 'neovim/nvim-lspconfig', enabled = false },
+  {
+    'folke/todo-comments.nvim',
+    event = 'BufEnter',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = {},
+    keys = {
+      {
+        '<leader>st',
+        function()
+          require('snacks.picker').todo_comments()
+        end,
+        desc = 'Todo',
+      },
+      {
+        '<leader>sT',
+        function()
+          require('snacks.picker').todo_comments { keywords = { 'TODO', 'FIX', 'FIXME' } }
+        end,
+        desc = 'Todo/Fix/Fixme',
+      },
+    },
+  },
   { 'NMAC427/guess-indent.nvim', event = 'BufReadPost', opts = {} },
   {
     'folke/which-key.nvim',
