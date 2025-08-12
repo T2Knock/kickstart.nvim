@@ -8,6 +8,7 @@ vim.diagnostic.config {
   underline = {
     severity = vim.diagnostic.severity.ERROR,
   },
+  jump = { float = true },
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = '󰅚 ',
