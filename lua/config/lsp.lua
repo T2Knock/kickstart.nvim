@@ -1,3 +1,5 @@
+vim.lsp.enable { 'lua_ls', 'stylua', 'ts_ls', 'gopls', 'marksman', 'ruff', 'taplo', 'bashls', 'yamlls', 'jsonls' }
+
 vim.diagnostic.config {
   severity_sort = true,
   virtual_text = true,
@@ -57,22 +59,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
-
--- Override default LSP config
-local overrides = {
-  bashls = {
-    filetypes = { 'sh', 'bash', 'zsh' },
-  },
-  lua_ls = {
-    settings = {
-      Lua = {
-        completion = { callSnippet = 'Replace' },
-        diagnostics = { disable = { 'missing-fields' } },
-      },
-    },
-  },
-}
-
-for server, config in pairs(overrides) do
-  vim.lsp.config(server, config)
-end

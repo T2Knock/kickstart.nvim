@@ -1,23 +1,23 @@
 return {
   {
-    'neovim/nvim-lspconfig',
+    'mason-org/mason.nvim',
+    opts = {},
     dependencies = {
-      { 'mason-org/mason.nvim', opts = {} },
-      { 'mason-org/mason-lspconfig.nvim', opts = {} },
       {
         'WhoIsSethDaniel/mason-tool-installer.nvim',
         opts = {
           ensure_installed = {
             -- lsp
-            'lua_ls',
+            'lua-language-server',
             'stylua',
-            'ts_ls',
+            'typescript-language-server',
             'gopls',
             'marksman',
             'ruff',
             'taplo',
-            'bashls',
-            'yamlls',
+            'bash-language-server',
+            'yaml-language-server',
+            'eslint-lsp',
 
             -- dap
             'delve',
@@ -26,7 +26,6 @@ return {
 
             -- linter
             'shellcheck',
-            'eslint',
             'golangci-lint',
             'markdownlint-cli2',
 
