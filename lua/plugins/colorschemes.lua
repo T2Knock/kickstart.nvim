@@ -9,6 +9,11 @@ return {
         sidebars = 'normal',
         floats = 'normal',
       },
+      on_highlights = function(hl, c)
+        hl.DapStoppedLine = {
+          bg = '#2d3f76',
+        }
+      end,
     },
   },
 }
